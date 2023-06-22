@@ -1,4 +1,5 @@
 def countable_nouns(number: int, options: tuple[str, str, str]) -> str:
+    # ДОБАВИТЬ: строку документации
     last_digit = number % 10
     last_two_digits = number % 100
 
@@ -10,3 +11,8 @@ def countable_nouns(number: int, options: tuple[str, str, str]) -> str:
         return options[2]
 
 
+# СДЕЛАТЬ: выполнить проверку работоспособности функции согласно требованиями задания
+# ДОБАВИТЬ: комментарий с результатами проверки со своими входными данными
+
+
+# ИТОГ: код хороший, доработать задачу целиком — 3/5

@@ -1,11 +1,15 @@
 def taxi_cost(distance: int, waiting_time: int = 0) -> int | None:
+    # ДОБАВИТЬ: строку документации
     if distance < 0 or waiting_time < 0:
         return None
 
+    # ИСПРАВИТЬ: такое ветвление избыточно, из-за него вам приходится повторять в коде одни и те же действия (например, вычисление стоимости ожидания) — это плохая практика, код необходимо стремиться писать таким образом, чтобы минимизировать количество самоповторов
     if distance == 0:
+        # ИСПРАВИТЬ: базовая стоимость никуда не делась: штраф прибавляется к ней
         cost = 80 + waiting_time * 3
     else:
         base_cost = 80
+        # КОММЕНТАРИЙ: здесь, например, можно использовать тернарный оператор ... if ... else ...
         distance_cost = (distance // 150) * 6
         waiting_cost = waiting_time * 3
         cost = base_cost + distance_cost + waiting_cost
@@ -13,14 +17,13 @@ def taxi_cost(distance: int, waiting_time: int = 0) -> int | None:
     return int(cost)
 
 
-distance = int(input("Enter the distance: "))
-waiting_time_input = input("Enter your waiting time (optional): ")
+# КОММЕНТАРИЙ: примеры проверки в тексте задания действительно нужны вам самому для того, чтобы удостовериться, что написанный вами код функционирует в соответствии со всеми требованиями задачи — учитесь тестировать свой код, на базовом уровне это должен уметь делать каждый разработчик
+# >>> taxi_cost(0, 5)
+# КОММЕНТАРИЙ: а должно быть 175
+# 95
 
-if waiting_time_input:
-    waiting_time = int(waiting_time_input)
-else:
-    waiting_time = 0
-
-print(taxi_cost(distance, waiting_time))
+# СДЕЛАТЬ: выполнить проверку работоспособности функции согласно требованиями задания
+# ДОБАВИТЬ: комментарий с результатами проверки со своими входными данными
 
 
+# ИТОГ: неплохо, но нужно лучше — 3/6
