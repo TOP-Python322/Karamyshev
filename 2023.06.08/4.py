@@ -8,3 +8,5 @@ def countable_nouns(number: int, options: tuple[str, str, str]) -> str:
         return options[1]
     else:
         return options[2]
+
+

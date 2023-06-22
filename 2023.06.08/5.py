@@ -4,9 +4,9 @@ def central_tendency(num1: float, num2: float, *numbers: float) -> dict[str, flo
     length = len(sorted_numbers)
 
     if length % 2 == 0:
-        median = (sorted_numbers[length // 2 - 1] + sorted_numbers[length // 2]) / 2
+        median = (sorted_numbers[length//2-1] + sorted_numbers[length//2]) / 2
     else:
-        median = sorted_numbers[length // 2]
+        median = sorted_numbers[length//2]
 
     arithmetic_mean = sum(sorted_numbers) / length
 
@@ -23,3 +23,5 @@ def central_tendency(num1: float, num2: float, *numbers: float) -> dict[str, flo
         'geometric': geometric_mean,
         'harmonic': harmonic_mean
     }
+
+

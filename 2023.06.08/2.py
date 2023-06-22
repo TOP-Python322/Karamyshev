@@ -12,6 +12,7 @@ def taxi_cost(distance: int, waiting_time: int = 0) -> int | None:
 
     return int(cost)
 
+
 distance = int(input("Enter the distance: "))
 waiting_time_input = input("Enter your waiting time (optional): ")
 
@@ -21,7 +22,5 @@ else:
     waiting_time = 0
 
 print(taxi_cost(distance, waiting_time))
-
-
 
 
